@@ -13,10 +13,10 @@ case 1
     sobelY = permute(sobelX, [3 1 2]);
     sobelZ = permute(sobelX, [2 3 1]);
 
-    voxelSurface = int32(zeros(size(voxel)));
-    voxelSurface = voxelSurface + abs(imfilter(voxel, sobelX));
-    voxelSurface = voxelSurface + abs(imfilter(voxel, sobelY));
-    voxelSurface = voxelSurface + abs(imfilter(voxel, sobelZ));
+    voxelSurface = zeros(size(voxel));
+    voxelSurface = voxelSurface + double(abs(imfilter(voxel, sobelX)));
+    voxelSurface = voxelSurface + double(abs(imfilter(voxel, sobelY)));
+    voxelSurface = voxelSurface + double(abs(imfilter(voxel, sobelZ)));
 
 case 2
     enlarged = voxel;

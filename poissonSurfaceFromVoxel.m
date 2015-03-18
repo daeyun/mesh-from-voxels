@@ -161,6 +161,8 @@ cgDepth = 0;
 [mesh.f, mesh.v] = poissonRecon(points, pointNormals, args.depth, fullDepth, ...
     scale, samplesPerNode, cgDepth, 0);
 
+mesh.v(:, [1 2]) = mesh.v(:, [2 1]);
+
 if nargout > 1, varargout{1} = points;, end
 if nargout > 2, varargout{2} = pointNormals;, end
 
