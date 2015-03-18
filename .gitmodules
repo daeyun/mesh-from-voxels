@@ -1,0 +1,6 @@
+[submodule "cpp/dshinShapeCpp"]
+	path = cpp/dshinShapeCpp
+	url = git@github.com:daeyun/dshin-shape-cpp.git
+[submodule "cpp/poissonRecon"]
+	path = cpp/poissonRecon
+	url = git@github.com:daeyun/poisson-surface-reconstruction.git
